@@ -1,6 +1,7 @@
 node_modules/
 dist/
-build/
+/instaladores/
+/build/
 .cache/
 .env*
 .vite/

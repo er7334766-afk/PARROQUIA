@@ -62,7 +62,7 @@ function Login({ onLogin, onError }: { onLogin: () => void; onError: () => void 
       <div className="login-card grid w-full max-w-[1040px] overflow-hidden bg-[#f7f9fd] shadow-2xl md:grid-cols-[1.08fr_1fr]">
         <section className="login-brand relative flex min-h-[390px] flex-col items-center justify-center overflow-hidden bg-[#002B5C] px-10 py-12 text-center text-white md:min-h-[630px]">
           <img
-            src="/assets/parish-logo.png"
+            src={`${import.meta.env.BASE_URL}assets/parish-logo.png`}
             alt="Parroquia San Juan Bautista"
             className="relative z-10 h-[300px] w-auto object-contain md:h-[365px]"
           />

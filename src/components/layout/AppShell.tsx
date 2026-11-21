@@ -77,7 +77,7 @@ export default function AppShell({ children, activeView, onNavigate, onLogout }:
           <X size={22} />
         </button>
         <img
-          src="/assets/parish-logo.png"
+          src={`${import.meta.env.BASE_URL}assets/parish-logo.png`}
           alt="Parroquia San Juan Bautista"
           className="mx-auto mt-7 h-36 w-auto object-contain"
         />

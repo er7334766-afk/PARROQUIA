@@ -173,7 +173,10 @@ export default function Certificate({ kind, onBack }: CertificateProps) {
               <h1>{certificate.title}</h1>
               <div className="cert-rule" />
             </div>
-            <img src="/assets/parish-logo.png" alt="Parroquia San Juan Bautista" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/parish-logo.png`}
+              alt="Parroquia San Juan Bautista"
+            />
           </header>
           <div className="cert-diocese">
             <strong>OBISPADO DE TRUJILLO</strong>
