@@ -1,0 +1,196 @@
+.certificate-page {
+  width: min(100%, 820px);
+  aspect-ratio: 0.76;
+  background: #f2f6fc;
+  border: 17px solid #0f5ca9;
+  box-shadow: 0 18px 55px rgb(0 43 92 / 20%);
+  color: #111827;
+  font-family: Georgia, "Times New Roman", serif;
+  padding: 8px;
+}
+
+.certificate-inner {
+  position: relative;
+  height: 100%;
+  border: 2px solid #dca123;
+  padding: 42px 45px 32px;
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.cert-header img {
+  width: 92px;
+  height: 116px;
+  object-fit: contain;
+}
+
+.cert-header h1 {
+  font-size: clamp(19px, 3vw, 31px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.cert-placeholder {
+  display: flex;
+  width: 92px;
+  height: 92px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #ffc5c0;
+  font-size: 12px;
+}
+
+.cert-rule {
+  margin-top: 22px;
+  height: 2px;
+  background: linear-gradient(90deg, #0f5ca9, #dca123, #0f5ca9);
+}
+
+.cert-diocese {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.cert-body {
+  margin-top: 35px;
+  font-size: clamp(11px, 1.65vw, 15px);
+  line-height: 1.85;
+  text-align: justify;
+  text-transform: none;
+}
+
+.cert-body p + p {
+  margin-top: 9px;
+}
+
+.cert-line {
+  display: inline-block;
+  min-width: 105px;
+  border-bottom: 1px dotted #64748b;
+}
+
+.cert-line.short {
+  min-width: 55px;
+}
+
+.cert-line.long {
+  min-width: 220px;
+}
+
+.cert-footer {
+  position: absolute;
+  right: 45px;
+  bottom: 38px;
+  left: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  gap: 20px;
+}
+
+.cert-seal {
+  width: 92px;
+  height: 92px;
+  border: 11px solid #feeb75;
+  border-radius: 999px;
+  background: #0f5ca9;
+}
+
+.cert-corner {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-color: #dca123;
+}
+
+.cert-corner-tl {
+  left: 6px;
+  top: 6px;
+  border-left: 3px double;
+  border-top: 3px double;
+}
+.cert-corner-tr {
+  right: 6px;
+  top: 6px;
+  border-right: 3px double;
+  border-top: 3px double;
+}
+.cert-corner-bl {
+  bottom: 6px;
+  left: 6px;
+  border-bottom: 3px double;
+  border-left: 3px double;
+}
+.cert-corner-br {
+  right: 6px;
+  bottom: 6px;
+  border-right: 3px double;
+  border-bottom: 3px double;
+}
+
+@media (max-width: 640px) {
+  .certificate-inner {
+    padding: 24px 20px;
+  }
+  .cert-header {
+    gap: 8px;
+  }
+  .cert-header img,
+  .cert-placeholder {
+    width: 55px;
+    height: 65px;
+  }
+  .cert-body {
+    margin-top: 18px;
+    line-height: 1.45;
+  }
+  .cert-footer {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+  .cert-seal {
+    width: 58px;
+    height: 58px;
+    border-width: 7px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  body {
+    background: white !important;
+  }
+  body > * {
+    visibility: hidden;
+  }
+  .certificate-screen,
+  .certificate-screen * {
+    visibility: visible;
+  }
+  .certificate-screen {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    background: white;
+  }
+  .certificate-actions {
+    display: none !important;
+  }
+  .certificate-page {
+    width: 210mm;
+    height: 297mm;
+    box-shadow: none;
+  }
+}

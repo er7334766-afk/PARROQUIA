@@ -1,0 +1,15 @@
+{
+  "title": "Sistema de Gestión Parroquial",
+  "description": "Sistema en español para que parroquias gestionen feligreses, sacramentos, peticiones de misas, reportes y certificados desde una sola plataforma.",
+  "language": "es",
+  "icons": {
+    "icon": "/assets/parish-logo.png"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
